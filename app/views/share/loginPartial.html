@@ -1,0 +1,16 @@
+<form action="/account/login" id="logoutForm" method="post" class="horizontal horizontal">
+  <div id="not_loginIn">
+    <p>
+      <label ng-bind="vm.errorMessage" style="color:red;"></label>
+    </p>
+    <p><span>帳號</span>
+      <input type="text" ng-model="vm.user.account" class="form-input area_input"/>
+    </p>
+    <p><span>密碼</span>
+      <input type="text" ng-model="vm.user.password" class="form-input area_input"/>
+    </p>
+    <p>
+      <input type="button" ng-click="vm.Login()" class="btn btn-default"/>
+    </p>
+  </div>
+</form>

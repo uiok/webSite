@@ -1,0 +1,42 @@
+<div class="head_area">
+   <div class="head_container">
+      <div class="logo"><a href="#"><img src="img/logo.png"></a></div>
+      <div class="head_right">
+         <select id="cultureselectid" class="form-select">
+            <option value="zh-CN">简体中文</option>
+            <option value="zh-TW">繁體中文</option>
+            <option value="en-US">English</option>
+         </select>
+         <br>
+         <div class="member">
+            <form action="/Account/LogOff" id="logoutForm" method="post" class="navbar-right"><span>Hi</span><span>abc</span>
+               <input type="submit" value="登出" class="login_out">
+            </form>
+         </div>
+      </div>
+   </div>
+</div>
+<div class="navbar navbar-inverse navbar-fixed-top">
+   <div class="container main_menu">
+      <div class="navbar-header">
+         <button data-toggle="collapse" data-target=".navbar-collapse" class="navbar-toggle"><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span></button>
+      </div>
+      <div class="navbar-collapse collapse">
+         <ul class="nav navbar-nav">
+            <li><a ui-sref="newsList">最新消息</a></li>
+            <li><a ui-sref="documentList">文件下載</a></li>
+            <li>
+               <a href="#">
+                  課程總覽
+                  <div class="arrow-bottom"></div>
+               </a>
+               <ul>
+                  <li> <a href="#"></a></li>
+               </ul>
+            </li>
+            <li><a ui-sref="personDetail">學習紀錄</a></li>
+         </ul>
+      </div>
+   </div>
+</div>
+<bodyContent></bodyContent>

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <script>document.write('<base href="' + document.location + '" />');</script>
+    <title>Template - Site</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+  
+    <script src="https://unpkg.com/core-js/client/shim.min.js"></script>
+
+    <script src="https://unpkg.com/zone.js@0.6.25?main=browser"></script>
+    <script src="https://unpkg.com/reflect-metadata@0.1.8"></script>
+    <script src="https://unpkg.com/systemjs@0.19.39/dist/system.src.js"></script>
+    <script src="./app/public/javascripts/bootstrap.js"></script>
+    <script src="./app/public/javascripts/jquery-1.10.2.js"></script>
+
+    <script src="systemjs.config.js"></script>
+    <script>
+      System.import('app/main').catch(function(err){ console.error(err); });
+    </script>
+    <link rel="stylesheet" type="text/css" href="./app/public/stylesheets/bootstrap.css">
+    <link rel="stylesheet" type="text/css" href="./app/public/stylesheets/layout.css">
+    <link rel="stylesheet" type="text/css" href="./app/public/stylesheets/areatab.css">
+  </head>
+
+  <body>
+    <applicationHost>Loading...</applicationHost>
+  </body>
+</html>

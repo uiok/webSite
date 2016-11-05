@@ -1,0 +1,468 @@
+﻿/*Body*/
+body {
+	padding: 0;
+	background-color: #eee;
+}
+
+/*選單MENU*/
+.container {
+	padding: 0;
+	margin: 0 auto;
+}
+
+.navbar-fixed-top {
+	position: relative;
+	background-color: #1d2088;
+	border: 0;
+	padding: 0 10px;
+	width: 100%;
+	clear: both;
+}
+
+	.navbar-fixed-top .main_menu {
+		max-width: 940px;
+		margin: 0 auto;
+		border-top: 1px solid #1d2088;
+		border-bottom: 1px solid #1d2088;
+		background: #eee !important; /* Old browsers */
+		background: -moz-linear-gradient(top, #eee 0%, #ffffff 100%) !important; /* FF3.6+ */
+		background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#eee), color-stop(100%, #ffffff)) !important; /* Chrome,Safari4+ */
+		background: -webkit-linear-gradient(top, #eee 0%, #ffffff 100%) !important; /* Chrome10+,Safari5.1+ */
+		background: -o-linear-gradient(top, #eee 0%,#ffffff 100%) !important; /* Opera 11.10+ */
+		background: -ms-linear-gradient(top, #eee 0%, #ffffff 100%) !important; /* IE10+ */
+		background: linear-gradient(to bottom, #eee 0%, #ffffff 100%) !important; /* W3C */
+		filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#eee', endColorstr='#ffffff',GradientType=0 ) !important; /* IE6-9 */
+		-webkit-border-radius: 5px 5px 0 0;
+		-moz-border-radius: 5px 5px 0 0;
+		border-radius: 5px 5px 0 0;
+	}
+
+		.navbar-fixed-top .main_menu a.active {
+			color: #e60019 !important;
+			text-shadow: 0 1px 1px #ccc;
+			font-weight: 600;
+		}
+
+/*選單選項*/
+.navbar-collapse {
+	/*padding: 0;*/
+}
+
+.navbar-brand {
+	margin-left: 6px !important;
+	padding-right: 20px !important;
+	border-right: 1px solid #ddd;
+	color: #1d2088 !important;
+}
+
+.nav.navbar-nav li {
+	padding-left: 0;
+	padding-right: 0;
+	border-right: 1px solid #ddd;
+}
+
+	.nav.navbar-nav li:last-child {
+		/*border-right: none;*/
+	}
+
+	.navbar-brand, .nav.navbar-nav li a {
+		font-size: 14px;
+		color: #1d2088 !important;
+	}
+
+		.navbar-brand:hover, .nav.navbar-nav li a:hover {
+			color: #e60019 !important;
+			text-decoration: none;
+		}
+
+.navbar-inverse .navbar-collapse, .navbar-inverse .navbar-form {
+	border: none;
+}
+
+/*下拉選單設定*/
+.nav > li > a {
+	padding-left: 15px;
+	padding-right: 25px;
+}
+
+	.nav > li > a:hover .arrow-bottom {
+		border-top: 6px solid #e60019;
+	}
+
+.nav li ul {
+	background-color: #fff;
+	-webkit-border-radius: 0 0 5px 5px;
+	-moz-border-radius: 0 0 5px 5px;
+	border-radius: 0 0 5px 5px;
+	-webkit-box-shadow: 0 1px 5px rgba(34, 25, 25, 0.5);
+	-moz-box-shadow: 0 1px 5px rgba(34, 25, 25, 0.5);
+	-ms-box-shadow: 0 1px 5px rgba(34, 25, 25, 0.5);
+	-o-box-shadow: 0 1px 5px rgba(34, 25, 25, 0.5);
+	box-shadow: 0 1px 5px rgba(34, 25, 25, 0.5);
+	position: absolute;
+	top: 100%;
+	width: 113%;
+	padding: 0 0 5px;
+	margin: 0;
+	display: none;
+}
+
+	.nav li ul li {
+		list-style: none;
+		padding: 10px 10px 10px 15px !important;
+	}
+
+.nav li:hover ul {
+	display: block;
+	right: 0;
+	left: 0;
+	top: 100%;
+}
+
+.arrow-bottom {
+	position: absolute;
+	top: 23px;
+	left: 104px;
+	margin-left: 5px;
+	border-top: 6px solid #1d2088;
+	border-right: 6px solid transparent;
+	border-left: 6px solid transparent;
+	width: 5px;
+	height: 5px;
+}
+
+@media all and (max-width:765px) {
+	.nav li:hover ul {
+		position: relative;
+		display: block;
+		background: transparent;
+	}
+
+		.nav li:hover ul li {
+			background: transparent;
+			padding-left: 25px !important;
+		}
+
+	.arrow-bottom {
+		top: 18px;
+	}
+}
+
+/*手機板橫條MENU*/
+.navbar-toggle {
+	position: relative;
+	float: right;
+	padding: 9px 10px;
+	margin-top: 8px;
+	margin-right: 22px;
+	margin-bottom: 8px;
+	background: #1d2088; /* Old browsers */
+	border: 1px solid #ddd !important;
+	border-radius: 4px;
+}
+
+.navbar-inverse .navbar-toggle:hover, .navbar-inverse .navbar-toggle:focus {
+	background-color: #a3091a;
+}
+
+/*TOP置頂*/
+#scrollUp {
+	bottom: 30px;
+	right: 40px;
+	/*background: rgba(68, 68, 68, 0.90);
+    color: #fff;*/
+	background: url(/img/top.png) no-repeat 0 0;
+	width: 48px;
+	height: 48px;
+}
+
+	#scrollUp:hover {
+		background: url(/img/top-hover.png) no-repeat 0 0;
+		width: 48px;
+		height: 48px;
+	}
+
+/*頁首*/
+.head_area {
+	width: 100%;
+	background-color: #1d2088;
+	padding-top: 20px;
+}
+
+	.head_area .head_container {
+		position: relative;
+		max-width: 940px;
+		margin: 0 auto;
+		height: 95px;
+	}
+
+		/*頁首-Logo*/
+		.head_area .head_container .logo {
+			display: inline-block;
+			/*width: 36%;*/
+			width: 70%;
+			padding-bottom: 10px;
+			padding-left: 10px;
+			position: absolute;
+			bottom: 0;
+		}
+
+			.head_area .head_container .logo img {
+				/*max-width: 100%;
+				height: auto;*/
+				width: auto;
+				height: 85px;
+				border: 0;
+			}
+
+		/*頁首-右方篩選區域*/
+		.head_area .head_container .head_right {
+			display: inline-block;
+			/*width: 63%;*/
+			width: 180px;
+			text-align: right;
+			padding-right: 5px;
+			padding-bottom: 3px;
+			position: absolute;
+			bottom: 0;
+			right: 0;
+		}
+
+			.head_area .head_container .head_right .member {
+				color: #fff;
+				font-size: 16px;
+				margin: 4px 0;
+			}
+
+				.head_area .head_container .head_right .member img {
+					width: 28px;
+					height: auto;
+					margin-left: 5px;
+					margin-bottom: 3px;
+				}
+
+					.head_area .head_container .head_right .member img.cycle {
+						width: 28px;
+						height: 28px;
+						-webkit-border-radius: 99em 99em 99em 99em;
+						-moz-border-radius: 99em 99em 99em 99em;
+						border-radius: 99em 99em 99em 99em;
+					}
+
+				.head_area .head_container .head_right .member .login_out {
+					background-color: transparent;
+					border: none;
+					color: #fff;
+				}
+
+					.head_area .head_container .head_right .member .login_out:hover {
+						color: #e60019;
+						text-decoration: underline;
+					}
+
+			/*頁首-右方篩選區域-搜尋*/
+			.head_area .head_container .head_right .search {
+				clear: both;
+				float: right;
+			}
+
+				.head_area .head_container .head_right .search button {
+					margin-bottom: 3px;
+				}
+
+					.head_area .head_container .head_right .search button img {
+						width: 24px;
+						height: auto;
+					}
+
+/*頁中*/
+.body-content {
+	max-width: 940px;
+}
+
+/*頁尾*/
+.footer {
+	width: 100%;
+	height: auto;
+	background-color: #1d2088;
+	padding: 15px 0 10px 0;
+}
+
+	.footer .footer_container {
+		/*background-color: #640910;*/
+		max-width: 940px;
+		margin: 0 auto;
+		text-align: center;
+		color: #ddd;
+		font-size: 14px;
+		line-height: 12px;
+	}
+
+/*區塊*/
+.area {
+	background-color: #fff;
+	-webkit-box-shadow: 0 1px 3px rgba(34, 25, 25, 0.7);
+	-moz-box-shadow: 0 1px 3px rgba(34, 25, 25, 0.7);
+	-ms-box-shadow: 0 1px 3px rgba(34, 25, 25, 0.7);
+	-o-box-shadow: 0 1px 3px rgba(34, 25, 25, 0.7);
+	box-shadow: 0 1px 3px rgba(34, 25, 25, 0.7);
+	-webkit-border-radius: 5px;
+	-moz-border-radius: 5px;
+	border-radius: 5px;
+	margin-bottom: 15px;
+	padding: 10px;
+}
+
+	.area .area_title {
+		background: #1d2088 !important; /* Old browsers */
+		background: -moz-linear-gradient(top, #0026b4 0%, #1d2088 100%) !important; /* FF3.6+ */
+		background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#0026b4), color-stop(100%, #1d2088)) !important; /* Chrome,Safari4+ */
+		background: -webkit-linear-gradient(top, #0026b4 0%, #1d2088 100%) !important; /* Chrome10+,Safari5.1+ */
+		background: -o-linear-gradient(top, #0026b4 0%,#1d2088 100%) !important; /* Opera 11.10+ */
+		background: -ms-linear-gradient(top, #0026b4 0%, #1d2088 100%) !important; /* IE10+ */
+		background: linear-gradient(to bottom, #0026b4 0%, #1d2088 100%) !important; /* W3C */
+		filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#0026b4', endColorstr='#1d2088',GradientType=0 ) !important; /* IE6-9 */
+		-webkit-border-radius: 5px 5px 0 0;
+		-moz-border-radius: 5px 5px 0 0;
+		border-radius: 5px 5px 0 0;
+		color: #fff;
+		margin: -10px -10px 10px -10px;
+		padding: 8px 10px;
+		text-shadow: 0 1px 1px #000;
+	}
+
+		.area .area_title .extra {
+			display: block;
+			float: right;
+		}
+
+	.area p {
+		/*width: 100%;
+		text-align: center;*/
+	}
+
+	.area a {
+		text-decoration: none;
+	}
+
+	/*輸入方塊、驗證碼、忘記密碼*/
+	.area .area_input {
+		width: 60%;
+	}
+
+	.area .vericode_input {
+		width: 80px;
+	}
+
+	.area #verificationcode {
+		width: 110px;
+		cursor: pointer;
+	}
+
+	.area .forget_pwd {
+		margin-left: 10px;
+	}
+
+		.area .forget_pwd:hover {
+			text-decoration: underline;
+		}
+
+/*登入*/
+#not_loginIn .validation {
+	margin-left: 53px;
+	line-height: 8px;
+}
+
+#not_loginIn input[type=submit] {
+	width: 80px;
+	margin-left: 53px;
+}
+
+/*登出*/
+#loginIn {
+	text-align: center;
+	padding: 30px 0;
+}
+
+	#loginIn p {
+	}
+
+	#loginIn input[type=submit] {
+		width: 80%;
+	}
+
+/*輸入框框*/
+.form-input {
+	width: 250px;
+	height: 28px;
+	padding: 2px 8px;
+	font-size: 14px;
+	line-height: 1.42857143;
+	background-color: #FFFFFF;
+	background-image: none;
+	border: 1px solid #ccc;
+	border-radius: 4px;
+	-webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,.075);
+	box-shadow: inset 0 1px 1px rgba(0,0,0,.075);
+	-webkit-transition: border-color ease-in-out .15s, -webkit-box-shadow ease-in-out .15s;
+	-o-transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
+	transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
+}
+
+/*下拉選單*/
+.form-select {
+	height: 26px;
+	padding: 2px 8px;
+	font-size: 14px;
+	line-height: 1.42857143;
+	background-color: #FFFFFF;
+	background-image: none;
+	border: 1px solid #ccc;
+	border-radius: 4px;
+	-webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,.075);
+	box-shadow: inset 0 1px 1px rgba(0,0,0,.075);
+	-webkit-transition: border-color ease-in-out .15s, -webkit-box-shadow ease-in-out .15s;
+	-o-transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
+	transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
+	min-width: 80px;
+	width: auto;
+}
+
+/*定義手機板*/
+@media all and (max-width:765px) {
+	.navbar-brand {
+		border-right: none;
+	}
+
+	.container.main_menu {
+		padding-left: 10px;
+	}
+
+	.nav.navbar-nav {
+		margin-top: -5px;
+	}
+
+	.body-content {
+		padding: 0 10px;
+	}
+
+	.footer .footer_container {
+		padding: 0 10px;
+		line-height: 16px;
+	}
+}
+
+@media all and (max-width:520px) {
+	.head_area .head_container {
+		height: 50px;
+	}
+
+		.head_area .head_container .logo {
+			width: 45%;
+		}
+
+			.head_area .head_container .logo img {
+				max-width: 100%;
+				height: auto;
+			}
+}
