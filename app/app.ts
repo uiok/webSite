@@ -4,10 +4,12 @@ import { AppComponent }       from './controllers/root';
 import { FormsModule }        from '@angular/forms';
 import { IndexComponent }     from './controllers/index';
 import { LoginComponent } 	  from './controllers/loginPartial';
+import { NewsComponent } 	  from './controllers/news';
+import { routing }      	  from './router/route';
 @NgModule({
-  imports: [ BrowserModule,  FormsModule ],
+  imports: [ BrowserModule,  FormsModule, routing],
   declarations: [
-    AppComponent, IndexComponent,LoginComponent
+    AppComponent, IndexComponent,LoginComponent,NewsComponent
   ],
   providers: [  ],
   bootstrap: [ AppComponent ]
