@@ -1,0 +1,119 @@
+<link rel="stylesheet" href="./app/public/stylesheets/font/areatab.css"/>
+<link rel="stylesheet" href="./app/public/stylesheets/font/class_detail.css"/>
+<link rel="stylesheet" href="./app/public/stylesheets/fancybox/css/jquery.fancybox.css"/>
+<div class="row">
+  <div class="col-md-12">
+    <div class="area">
+      <div class="area_title">課程</div>
+      <div class="row">
+        <div class="col-md-12">
+          <div class="col-md-8">
+            <div id="youkuplayer" style="width:100%;height:380px"></div>
+            <div class="center_area"><a id="aaStart" href="#model" ng-show="vm.classDetailData.vedioInfo.examination.length &gt; 0" class="btn default test fancybox"></a>
+              <div ng-bind="vm.classDetailData.vedioInfo.vedioCode" class="pwd"></div>
+              <div ng-bind="vm.classDetailData.vedioInfo.clickNumber" class="count"></div>
+            </div>
+            <div class="video_description">
+              <div class="video_title">課程</div>
+              <div class="video_content">
+                <h1 ng-bind="vm.classDetailData.vedioInfo.description"></h1>
+              </div>
+            </div>
+            <div class="write">
+              <h1>留言</h1>
+              <textarea ng-model="vm.newMessage" class="form-input form-textarea"></textarea><a href="javascript:void(0)" ng-click="viewAction.createNewMessage()" class="btn default send">回覆</a>
+            </div>
+            <div class="message">
+              <div ng-repeat="msg in vm.messages | orderBy:MId:true track by $index " class="message_row"><img ng-if="msg.UserImage" ng-src="{{msg.UserImage}}"/><img src="/img/people_photo.jpg" ng-if="!msg.UserImage"/>
+                <div class="message_content">
+                  <h1><span ng-bind="msg.UserName"></span><span ng-bind="msg.Date" class="date"></span></h1>
+                  <p ng-bind="msg.Content"></p><a href="javascript:void(0)" ng-click="viewAction.slideDown(msg.MId)" class="btn_reply"></a>
+                  <div class="reply show">
+                    <textarea ng-model="msg.NewReply" class="form-input form-textarea"></textarea><a href="javascript:void(0)" ng-click="viewAction.createNewReply(msg.MId, msg.NewReply)" class="btn default send btn_reply2"></a><a href="javascript:void(0)" ng-click="viewAction.slideUp(msg.MId)" class="btn default send btn_cancel"></a>
+                  </div>
+                  <div ng-repeat="reply in msg.Reply track by $index" class="message_row"><img ng-if="reply.UserImage" ng-src="{{reply.UserImage}}"/><img src="/img/people_photo.jpg" ng-if="!reply.UserImage"/>
+                    <div class="message_content">
+                      <h1><span ng-bind="reply.UserName"></span><span ng-bind="reply.Date" class="date"></span></h1>
+                      <p ng-bind="reply.Content"></p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="video_list">
+              <div class="video_list_title">我是標題</div>
+              <div ng-repeat="item in vm.classDetailData.others" class="video_list_content"><a>
+                  <div class="video_list_row"><img ng-src="item.vedioImage"/>
+                    <div class="video_list_description">
+                      <h1>{{item.Description}}</h1>
+                      <p>{{"點擊數: " + item.ClickNumber}}</p>
+                    </div>
+                  </div></a></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="model">
+    <div class="detail-title">進行評量</div>
+    <div class="text">
+      <h1>本次評量共10题</h1>
+      <table class="table table-striped table-bordered table-hover">
+        <thead>
+          <tr>
+            <th>編號</th>
+            <th>評量題目</th>
+            <th>選項</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr ng-repeat="item in vm.examination">
+            <td ng-bind="$index"></td>
+            <td ng-bind="item.Question" class="td_left"></td>
+            <td class="td_left">
+              <div ng-repeat="ittem in item.Options" class="table_radio"></div>
+              <input type="radio" ng-model="ittem.aa"/>
+              <label ng-bind="ittem.Option" class="table_radio"></label>
+            </td>
+          </tr>
+        </tbody>
+        <tfoot>
+          <tr>
+            <td colspan="3" class="td_sumbit"><a href="javascript:void(0)" ng-click="" class="btn default send">送出作答</a></td>
+          </tr>
+        </tfoot>
+      </table>
+      <table class="table table-striped table-bordered table-hover">
+        <thead>
+          <tr>
+            <th>編號</th>
+            <th>評量題目</th>
+            <th>選項</th>
+            <th>狀態</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr ng-repeat="item in vm.examinationAnswer">
+            <td ng-bind="$index"></td>
+            <td ng-bind="item.Question" class="td_left"></td>
+            <td class="td_left">
+              <div ng-repeat="ittem in item.Options" class="table_radio"></div>
+              <input type="radio" name="abc{{$parent.$index}}" ng-model="ittem.aa" ng-value="true"/>
+              <label ng-bind="ittem.Option" ng-class="{'table_success':ittem.Answer }" class="table_radio"></label>
+            </td>
+            <td><img src="/img/success.png" ng-if="item.bb" class="status"/><img src="/img/error.png" ng-if="!item.bb" class="status"/></td>
+          </tr>
+        </tbody>
+        <tfoot>
+          <tr>
+            <td colspan="4" class="td_sumbit"><a id="close" href="javascript:void(0)" class="btn default send">關閉</a></td>
+          </tr>
+        </tfoot>
+      </table>
+    </div>
+  </div>
+</div>
+<script type="text/javascript" src="./app/public/stylesheets/fancybox/js/jquery.fancybox.js"></script>

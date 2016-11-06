@@ -1,0 +1,38 @@
+<div class="row">
+  <div class="col-md-12">
+    <div style="float: left; margin-right: 3px;">
+      <select ng-model="vm.testRecordCourse" ng-options="item as item.courseName for item in vm.courses track by item.id" ng-change="vm.testRecordTargetUnit()" class="form-select">
+        <option value="">--請選擇--</option>
+      </select>
+      <select ng-model="vm.testRecordCourseUnit" ng-options="item as item.name for item in vm.testRecordCourseUnits  track by item.id" ng-change="" class="form-select">
+        <option value="">--請選擇--</option>
+      </select>
+    </div>
+    <div>
+      <table class="table table-striped table-bordered">
+        <thead>
+          <tr>
+            <th><span>日期</span></th>
+            <th><span>標題</span></th>
+            <th><span>題數</span></th>
+            <th><span>答對</span></th>
+            <th><span>答錯</span></th>
+            <th><span>狀態</span></th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr ng-repeat="item in vm.dat">
+            <td ng-bind="item.createTime"></td>
+            <td ng-bind="item.VedioName" class="td_title"></td>
+            <td ng-bind="{{item.CorrectNumber + item.ErrorNumber}}"></td>
+            <td ng-bind="item.CorrectNumber"></td>
+            <td ng-bind="item.ErrorNumber"></td>
+            <td>
+              <div ng-class="{item.Light =0:'light red',item.Light =1:'light yellow',item.Light =2:'light green'}"></div>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,117 @@
+<div class="row">
+  <div class="col-md-12">
+    <table class="form_table">
+      <tr>
+        <td><img src="vm.basicData.image" class="photo"/>
+          <div class="upload"><span><font color="red">* 123</font><font color="red">.jpg .png .gif</font></span><br/><br/>
+            <input id="uupload" type="file" class="btn btn-default"/>
+            <input type="button" value="上傳" ng-click="vm.getFile()" class="btn default"/>
+          </div>
+        </td>
+      </tr>
+      <tr>
+        <td class="td_BR"></td>
+      </tr>
+    </table>
+    <div class="col-md-6">
+      <table border="0" cellpadding="0" cellspacing="0" class="form_table">
+        <tr>
+          <td class="td_title">身分別</td>
+          <td>老師</td>
+        </tr>
+        <tr>
+          <td>帳號</td>
+          <td>
+            <label ng-bind="vm.basicData.account"></label>
+          </td>
+        </tr>
+        <tr>
+          <td>密碼</td>
+          <td>
+            <input type="password" disabled="disabled" ng-model="vm.basicData.password" class="form-input area_input"/><a href="javascript:void(0)" class="eye"><img src="/img/eye.png"/></a>
+          </td>
+        </tr>
+        <tr>
+          <td colspan="2" class="td_BR"></td>
+        </tr>
+        <tr>
+          <td>名稱</td>
+          <td>
+            <input type="text" ng-model="vm.basicData.name" class="form-input area_input"/>
+          </td>
+        </tr>
+        <tr>
+          <td>英文名稱</td>
+          <td>
+            <input type="text" ng-model="vm.basicData.englishName" class="form-input area_input"/>
+          </td>
+        </tr>
+        <tr>
+          <td>電話</td>
+          <td>
+            <input type="text" ng-model="vm.basicData.phone" class="form-input area_input"/>
+          </td>
+        </tr>
+        <tr>
+          <td>地址</td>
+          <td style="position: relative;">
+            <input type="text" style="text-overflow:ellipsis;" ng-model="vm.basicData.address" class="form-input area_input"/><img src="/img/house.png"/>
+          </td>
+        </tr>
+        <tr>
+          <td>信箱</td>
+          <td>
+            <input type="text" ng-model="vm.basicData.email" class="form-input area_input"/>
+          </td>
+        </tr>
+        <tr>
+          <td></td>
+          <td><span style="color:red;">忘記信箱</span></td>
+        </tr>
+        <tr>
+          <td colspan="2" class="td_BR"></td>
+        </tr>
+        <tr>
+          <td>園所名稱:</td>
+          <td ng-bind="vm.basicData.kindergartenName"></td>
+        </tr>
+        <tr>
+          <td colspan="2">
+            <input type="button" value="修改資料" class="btn default submit"/>
+          </td>
+        </tr>
+        <tr>
+          <td colspan="2" class="td_BR"></td>
+        </tr>
+      </table>
+    </div>
+    <div class="col-md-6">
+      <table border="0" cellpadding="0" cellspacing="0" class="form_table">
+        <tr>
+          <td style="width:120px;" class="td_title">舊密碼</td>
+          <td>
+            <input type="text" ng-model="vm.changePassword.oldPassword" class="form-input area_input"/>
+          </td>
+        </tr>
+        <tr>
+          <td style="width:120px;" class="td_title">新密碼</td>
+          <td>
+            <input type="text" ng-model="vm.changePassword.newPassword" class="form-input area_input"/>
+          </td>
+        </tr>
+        <tr>
+          <td style="width:120px;" class="td_title">確認密碼</td>
+          <td>
+            <input type="text" ng-model="vm.changePassword.confirmPassword" class="form-input area_input"/>
+          </td>
+        </tr>
+        <tr>
+          <td colspan="2">
+            <input type="button" value="變更密碼" class="btn default submit"/>
+          </td>
+        </tr>
+      </table>
+    </div>
+  </div>
+</div>
+<iframe id="hiddenIframe" src="" style="display:none; visibility:hidden;"></iframe>

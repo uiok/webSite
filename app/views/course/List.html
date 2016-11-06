@@ -1,0 +1,32 @@
+<link rel="stylesheet" href="./app/public/stylesheets/font/areatab.css"/>
+<div class="row">
+  <div class="col-md-12">
+    <div class="area">
+      <div class="area_title">課程</div>
+      <table class="table table-striped table-bordered table-hover table_sort">
+        <thead>
+          <tr>
+            <th></th>
+            <th><span>標題</span></th>
+            <th><span>視頻觀看</span></th>
+            <th><span>通過評量</span></th>
+            <th><span>建立時間</span></th>
+            <th><span>回覆/觀看</span></th>
+            <th><span>最後發表</span></th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr ng-repeat="item in vm.classData" ui-sref="classDetail({id:item.id})">
+            <td>{{item.VedioImage}}</td>
+            <td>{{item.description}}</td>
+            <td>item.VedioImage</td>
+            <td>item.VedioImage</td>
+            <td>{{item.createTime}}</td>
+            <td>{{item.description +'/'+item.createTime}}</td>
+            <td>{{item.LastResponseTime}}</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>
