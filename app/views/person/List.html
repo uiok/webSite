@@ -1,5 +1,6 @@
-<link rel="stylesheet" href="style/font/areatab.css"/>
-<link rel="stylesheet" href="style/font/person_detail.css"/>
+<!-- <link rel="stylesheet" href="./app/public/stylesheets/font/areatab.css"/>
+<link rel="stylesheet" href="./app/public/stylesheets/font/person_detail.css"/> -->
+<!-- tab 有特定寫法 -->
 <div class="row">
   <div class="col-md-12">
     <div class="area">
@@ -11,10 +12,18 @@
         <li role="presentation"><a href="#certificateRecord" aria-controls="certificateRecord" role="tab" data-toggle="tab">個人認證</a></li>
       </ul>
       <div class="tab-content">
-        <div id="person" role="tabpanel" class="tab-pane active"><!-- 放面板 --></div>
-        <div id="record" role="tabpanel" class="tab-pane"><!-- 放面板 --></div>
-        <div id="testRecord" role="tabpanel" class="tab-pane"><!-- 放面板 --></div>
-        <div id="certificateRecord" role="tabpanel" class="tab-pane"><!-- 放面板 --></div>
+        <div id="person" role="tabpanel" class="tab-pane active">
+          <personBasic></personBasic>
+        </div>
+        <div id="record" role="tabpanel" class="tab-pane">
+           <personRecord></personRecord>
+        </div>
+        <div id="testRecord" role="tabpanel" class="tab-pane">
+           <personTestRecord></personTestRecord>
+        </div>
+        <div id="certificateRecord" role="tabpanel" class="tab-pane">
+          <personCertificate></personCertificate>
+        </div>
       </div>
     </div>
   </div>

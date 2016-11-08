@@ -1,10 +1,10 @@
 <div class="row">
   <div class="col-md-12">
     <div style="float: left; margin-right: 3px;">
-      <select ng-model="vm.recordCourse" ng-options="item as item.courseName for item in vm.courses track by item.id" ng-change="vm.recordTargetUnit()" class="form-select">
+      <select class="form-select">
         <option value="">--請選擇--</option>
       </select>
-      <select ng-model="vm.recordCourseUnit" ng-options="item as item.name for item in vm.recordCourseUnits  track by item.id" ng-change="" class="form-select">
+      <select  class="form-select">
         <option value="">--請選擇--</option>
       </select>
     </div>
@@ -20,12 +20,12 @@
           </tr>
         </thead>
         <tbody>
-          <tr ng-repeat="item in vm.dat">
-            <td ng-bind="item.createTime"></td>
-            <td ng-bind="item.VedioName" class="td_title"></td>
-            <td ng-bind="item.VedioLength"></td>
-            <td ng-bind="item.LastStay"></td>
-            <td ng-bind="item.createTime">
+          <tr>
+            <td ></td>
+            <td  class="td_title"></td>
+            <td ></td>
+            <td ></td>
+            <td >
               <div style="background-color:#e7e8e5;width:100%;border-radius:5px;border: 1px inset #ddd;">
                 <div style="background-color:#00DB00 ;padding:8%;width:@(finalPercentage)%;border-radius:5px"></div>
               </div>

@@ -6,10 +6,16 @@ import { IndexComponent }     from './controllers/index';
 import { LoginComponent } 	  from './controllers/loginPartial';
 import { NewsComponent } 	  from './controllers/news';
 import { routing }      	  from './router/route';
+import { PersonComponent }	  from './controllers/person';
+import { BasicComponent }      	  from './controllers/person_Basic';
+import { CertificateComponent }      	  from './controllers/person_Certificate';
+import { RecordComponent }      	  from './controllers/person_Record';
+import { TestRecordComponent }      	  from './controllers/person_TestRecord';
+
 @NgModule({
   imports: [ BrowserModule,  FormsModule, routing],
   declarations: [
-    AppComponent, IndexComponent,LoginComponent,NewsComponent
+    AppComponent, IndexComponent,LoginComponent,NewsComponent,BasicComponent,CertificateComponent,PersonComponent,RecordComponent,TestRecordComponent
   ],
   providers: [  ],
   bootstrap: [ AppComponent ]
