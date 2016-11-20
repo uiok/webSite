@@ -11,11 +11,13 @@ import { BasicComponent }      	  from './controllers/person_Basic';
 import { CertificateComponent }      	  from './controllers/person_Certificate';
 import { RecordComponent }      	  from './controllers/person_Record';
 import { TestRecordComponent }      	  from './controllers/person_TestRecord';
+import { Tabs }      	  from './controllers/tabSet';
+import { Tab }      	  from './controllers/tab';
 
 @NgModule({
   imports: [ BrowserModule,  FormsModule, routing],
   declarations: [
-    AppComponent, IndexComponent,LoginComponent,NewsComponent,BasicComponent,CertificateComponent,PersonComponent,RecordComponent,TestRecordComponent
+    AppComponent, IndexComponent,LoginComponent,NewsComponent,BasicComponent,CertificateComponent,PersonComponent,RecordComponent,TestRecordComponent,Tabs,Tab
   ],
   providers: [  ],
   bootstrap: [ AppComponent ]

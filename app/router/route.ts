@@ -6,6 +6,8 @@ import { BasicComponent }			from '../../app/controllers/person_Basic';
 import { CertificateComponent }		from '../../app/controllers/person_Certificate';
 import { RecordComponent }			from '../../app/controllers/person_Record';
 import { TestRecordComponent }		from '../../app/controllers/person_TestRecord';
+import { Tabs }          from '../../app/controllers/tabSet';
+import { Tab }          from '../../app/controllers/tab';
 
 const appRoutes: Routes = [
   {
@@ -18,10 +20,6 @@ const appRoutes: Routes = [
   },
   {
     path: 'person',
-    component: PersonComponent,RecordComponent
-  },
-  {
-    path: 'person/record',
     component: PersonComponent
   }
 ];
