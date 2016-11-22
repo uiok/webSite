@@ -1,6 +1,5 @@
 import { Component } from  '@angular/core'
 import {Tabs} from './tabSet';
-import {Tab} from './tab';
 
 @Component({
 	selector:"personList",

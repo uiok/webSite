@@ -2,12 +2,10 @@ import { Component } from  '@angular/core';
 import { Tab } from './tab';
 
 @Component({
-	selector:"ng-content",
+	selector:"person_Basic",
 	templateUrl:"./app/views/person/basic.html"
 })
 
-export class BasicComponent implements Tab {
-	//not-work
-	title = "test";
-	active = true;
+export class BasicComponent{
+	
 } 
