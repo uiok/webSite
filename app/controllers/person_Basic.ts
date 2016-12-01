@@ -6,6 +6,6 @@ import { Tab } from './tab';
 	templateUrl:"./app/views/person/basic.html"
 })
 
-export class BasicComponent{
+export class BasicComponent {
 	
 } 

@@ -6,12 +6,12 @@ import { BasicComponent } from './person_Basic';
   template:'<div [hidden]="!active" class="pane"><ng-content></ng-content></div>',    
 })
 
-export class Tab implements OnInit{
+export class Tab{
 	//not-work
 	@Input('tabTitle') title: string;
 	@Input() active = false;
-	ngOnInit(){
-		this.title = 'Basic';
+	ngOnInit(name :string){
+		this.title = name;
 	}
 	
 }
