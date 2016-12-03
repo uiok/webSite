@@ -1,4 +1,4 @@
-import { Component, Input ,OnInit} from '@angular/core';
+import { Component, Input } from '@angular/core';
 import { BasicComponent } from './person_Basic';
 @Component({
   selector: 'tab',
@@ -10,9 +10,5 @@ export class Tab{
 	//not-work
 	@Input('tabTitle') title: string;
 	@Input() active = false;
-	ngOnInit(name :string){
-		this.title = name;
-	}
-	
 }
 

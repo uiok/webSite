@@ -2,7 +2,7 @@ import { NgModule }           from '@angular/core';
 import { BrowserModule }      from '@angular/platform-browser';
 import { AppComponent }       from './controllers/root';
 import { FormsModule }        from '@angular/forms';
-import { IndexComponent }     from './controllers/index';
+import { IndexComponent,NewListComponent,CourseListComponent }     from './controllers/index';
 import { LoginComponent } 	  from './controllers/loginPartial';
 import { NewsComponent } 	  from './controllers/news';
 import { routing }      	  from './router/route';
@@ -17,7 +17,8 @@ import { Tab }      	  from './controllers/tab';
 @NgModule({
   imports: [ BrowserModule,  FormsModule, routing],
   declarations: [
-    AppComponent, IndexComponent,LoginComponent,NewsComponent,BasicComponent,CertificateComponent,PersonComponent,RecordComponent,TestRecordComponent,Tabs,Tab
+    AppComponent, IndexComponent,LoginComponent,NewsComponent,BasicComponent,CertificateComponent,PersonComponent
+    ,RecordComponent,TestRecordComponent,Tabs,Tab,NewListComponent,CourseListComponent
   ],
   providers: [  ],
   bootstrap: [ AppComponent ]

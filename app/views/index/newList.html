@@ -1,0 +1,15 @@
+<div id="news" class="tab-pane">
+  <div class="row">
+      <div class="col-md-6">
+        <a href="#">
+          <div *ngFor='let item of newsData' class="thumbnail">
+            <div class="thumbnail_content">
+              <h1>【{{item}}】</h1>
+              <p> </p>
+            </div>
+          </div>
+        </a>
+      </div>
+  </div>
+  <div class="more"><a aria-controls="news" role="tab" data-toggle="tab">更多</a></div>
+</div>

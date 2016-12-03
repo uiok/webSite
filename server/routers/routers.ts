@@ -3,9 +3,6 @@ var newsContr = require('../routers/newsController.js');
 
 
 
-
-
-
 module.exports=function(app) {
 
 //index
