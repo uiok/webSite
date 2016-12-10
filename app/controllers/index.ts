@@ -11,13 +11,8 @@ import {wordService} from '../service/wordService';
 
 export class IndexComponent implements OnInit {
 	
-	constructor(private wordService:wordService){
-		//var titleList : string[] = ["最新消息","課程分類"];
-		//tab.ngOnInit(titleList)
-		// this._titleList = ["最新消息","課程分類"];
-		//tab.initTitle(["最新消息","課程分類"])
-		wordService.indexTabList = ["最新消息","課程分類"];
-		
+	constructor(private _wordService:wordService){
+		_wordService.indexTabList = ["最新消息","課程分類"];		
 	}
 	ngOnInit() {
 		
