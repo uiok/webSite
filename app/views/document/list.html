@@ -11,7 +11,7 @@
       <div class="row">
         <div style="width: 100px !important;" class="col-md-2"></div>
         <div class="col-md-10">
-          <button ng-repeat="item in vm.documentData" ng-click="vm.FilterDocumentTag(item.value)" style="margin-bottom: 5px" class="btn btn-default">{{item.text}}</button>
+          <button  *ngFor="let document of documents" (click)="gotoDetail(document)" style="margin-bottom: 5px" class="btn btn-default">{{document.text}}</button>
         </div>
       </div>
       <div ng-bind-html="vm.filterData"></div>
